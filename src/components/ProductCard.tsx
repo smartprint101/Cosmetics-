@@ -104,20 +104,21 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="mt-auto pt-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-stretch gap-1.5 sm:gap-2">
             <button
               onClick={handleAdd}
               disabled={!product.inStock}
-              className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-charcoal/70 py-2 text-[11px] font-medium uppercase tracking-wide text-charcoal transition-colors hover:bg-charcoal hover:text-warm disabled:opacity-40 md:hidden"
+              className="flex flex-1 items-center justify-center gap-1 whitespace-nowrap rounded-full border border-charcoal/70 px-1.5 py-2 text-[10px] font-medium uppercase tracking-normal text-charcoal transition-colors hover:bg-charcoal hover:text-warm disabled:opacity-40 sm:gap-1.5 sm:text-[11px] sm:tracking-wide md:hidden"
             >
-              <BagIcon width={14} height={14} />
+              <BagIcon width={13} height={13} className="shrink-0" />
               {added ? "Added" : "Add"}
             </button>
             <Link
               href={`/product/${product.slug}?order=1`}
-              className="flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-gold to-golddeep py-2 text-[11px] font-medium uppercase tracking-wide text-white transition hover:brightness-105"
+              className="flex flex-1 items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-r from-gold to-golddeep px-1.5 py-2 text-[10px] font-semibold uppercase tracking-normal text-white transition hover:brightness-105 sm:text-[11px] sm:tracking-wide"
             >
-              Order Now
+              <span className="sm:hidden">Order</span>
+              <span className="hidden sm:inline">Order Now</span>
             </Link>
           </div>
         </div>
