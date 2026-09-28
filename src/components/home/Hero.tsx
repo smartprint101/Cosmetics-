@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      <div className="container-lux grid items-center gap-8 py-10 sm:py-14 lg:grid-cols-2 lg:gap-12 lg:py-20">
+      <div className="container-lux grid items-center gap-6 py-6 sm:gap-8 sm:py-10 lg:grid-cols-2 lg:gap-12 lg:py-20">
         {/* Text */}
         <div className="animate-fadeUp order-2 text-center lg:order-1 lg:text-left">
           <span className="eyebrow">Beauty, Made Effortless.</span>
@@ -40,7 +40,7 @@ export function Hero() {
         </div>
 
         {/* Image */}
-        <div className="animate-fadeIn relative order-1 aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl shadow-lift sm:aspect-[5/5] lg:order-2 lg:ml-auto lg:aspect-[4/5]">
+        <div className="animate-fadeIn relative order-1 mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-3xl shadow-lift sm:aspect-[3/2] sm:max-w-xl lg:order-2 lg:ml-auto lg:mr-0 lg:aspect-[4/5] lg:max-w-md">
           <Image
             src="/scenes/hero.jpg"
             alt="LUMÉRA premium beauty essentials"
