@@ -160,7 +160,11 @@ export default function CheckoutPage() {
               <div className="flex justify-between border-t border-charcoal/10 pt-3 text-base"><dt className="font-semibold text-charcoal">Total</dt><dd className="font-semibold text-charcoal">{formatBDT(total)}</dd></div>
             </dl>
 
-            <button type="submit" disabled={submitting} className="btn-primary mt-5 w-full">
+            <button
+              type="submit"
+              disabled={submitting}
+              className="btn-primary mt-5 w-full whitespace-normal break-keep px-4 text-center text-sm normal-case leading-snug tracking-normal sm:text-[13px]"
+            >
               {submitting ? "প্রসেসিং…" : "অর্ডার নিশ্চিত করুন"}
             </button>
             <p className="mt-3 text-center text-[11px] text-clay">
@@ -176,7 +180,7 @@ export default function CheckoutPage() {
 function Field({ label, error, full, children }: { label: string; error?: string; full?: boolean; children: React.ReactNode }) {
   return (
     <div className={full ? "sm:col-span-2" : ""}>
-      <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-charcoal">{label}</label>
+      <label className="mb-1.5 block text-xs font-semibold normal-case tracking-normal text-charcoal">{label}</label>
       {children}
       {error && <p className="mt-1 text-xs text-rosedeep">{error}</p>}
     </div>
